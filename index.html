@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>book</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+  img:hover{
+    transform: scale(1.2);
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b><u>The Books<br>Gallery</b></u></h3>
+  </div>
+  <div class="w3-bar-block">
+   
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">The Romantic Books</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">The Fiction Books</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">The Horror Books</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">The Self-Help Books</a> 
+
+    
+
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+ 
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+   
+    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://i.pinimg.com/236x/b3/50/28/b350280e26357ae37b2298c5c17a20f6.jpg" style="width:50%" onclick="onClick(this)" >
+      <img src="https://i.pinimg.com/236x/b3/50/28/b350280e26357ae37b2298c5c17a20f6.jpg" style="width:50%" onclick="onClick(this)" >
+     
+    </div>
+
+    <div class="w3-half">
+      <img src="https://i.pinimg.com/236x/25/e9/2c/25e92cba3f7eec30c1d83304105bf51b.jpg" style="width: 50%;" onclick="onClick(this)" >
+      <img src="https://i.pinimg.com/236x/25/e9/2c/25e92cba3f7eec30c1d83304105bf51b.jpg" style="width: 50%;" onclick="onClick(this)" >
+      
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>The Romantic Books.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+   
+    <p><b>“It was love at first sight, at last sight, at ever and ever sight.”</b></p>
+  </div>
+
+  <!-- The Team 1 -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.pinimg.com/236x/15/e7/aa/15e7aa8cfda8146e5a9a78bd9b83919a.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3>Hopeless </h3>
+          <p class="w3-opacity"> Colleen Hoover</p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.pinimg.com/236x/86/49/6b/86496b156ddd5fbb9b9399e8fc6be55d.jpg" width="200" height="250">
+          <div class="w3-container">
+            <h3>Beautiful Disaster </h3>
+            <p class="w3-opacity"> Jamie McGuire </p>
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.pinimg.com/236x/ef/55/15/ef55151b13367f9d54fbc05b3e3096b4.jpg" width="200" height="250">
+          <div class="w3-container">
+            <h3>Fifty Shades of Grey</h3>
+            <p class="w3-opacity"> E.L. James </p>
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.pinimg.com/236x/83/55/72/83557235fb962ad45ab0f47b2a9bedc0.jpg" width="200" height="250">
+          <div class="w3-container">
+            <h3>	The Fault in Our Stars</h3>
+            <p class="w3-opacity">  John Green </p>
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.pinimg.com/236x/50/fe/ec/50feec497efff6b8973a0a79941f4be9.jpg" width="200" height="250">
+          <div class="w3-container">
+            <h3>	Divergent</h3>
+            <p class="w3-opacity">  Veronica Roth </p>
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.pinimg.com/236x/dc/d2/eb/dcd2ebbab89efd759e9a420eddcd6bee.jpg" width="200" height="250">
+          <div class="w3-container">
+            <h3>	Easy</h3>
+            <p class="w3-opacity">   Tammara Webber </p>
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+          </div>
+        </div>
+      </div>
+   
+  </div ><br><br>
+<div class="w3-center">
+  <button class="w3-button w3-center w3-grey w3-padding-large w3-hover-black">More</button>
+</div>
+
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>The Fiction Books.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+   
+    <p><b>"Truth is stranger than fiction, but it is because Fiction is obliged to stick to possibilities; Truth isn't"
+      </b></p>
+  </div>
+ 
+  
+
+  <!-- The Team 2 -->
+  <div class="w3-row-padding w3-grayscale ">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1664802258l/60149573._SY475_.jpg"  width="200" height="250">
+        <div class="w3-container">
+          <h3>Our Missing Hearts </h3>
+          <p class="w3-opacity"> Celeste Ng</p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1628100349l/57739876.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3> To Paradise</h3>
+          <p class="w3-opacity"> Hanya Yanagihara</p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1642803780l/59807954.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3> Other Birds</h3>
+          <p class="w3-opacity">Sarah Addison Allen  </p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1642403959l/58395049.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3> True Biz</h3>
+          <p class="w3-opacity"> Sara Nović</p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1673009807l/60415700._SY475_.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3> Now Is Not the Time to Panic</h3>
+          <p class="w3-opacity"> Kevin Wilson</p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1650574627l/60657583._SY475_.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3> Lucy by the Sea</h3>
+          <p class="w3-opacity"> Elizabeth Strout </p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+
+</div><br><br>
+
+<div class="w3-center">
+  <button class="w3-button w3-center w3-grey w3-padding-large w3-hover-black">More</button>
+</div>
+
+
+
+
+<div class="w3-container" id="designers" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>The Horror Books.</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+ 
+  <p><b>“I think perhaps all of us go a little crazy at times.”</b></p>
+</div>
+
+<!-- The Team 3-->
+<div class="w3-row-padding w3-grayscale">
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635260162l/58724923.jpg" width="200" height="250">
+      <div class="w3-container">
+        <h3>Hidden Pictures </h3>
+        <p class="w3-opacity">  Jason Rekulak </p>
+        <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1638536223l/59746719.jpg" width="200" height="250">
+      <div class="w3-container">
+        <h3> Gallows Hill</h3>
+        <p class="w3-opacity">Darcy Coates </p>
+        <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1627223541l/57926112.jpg" width="200" height="250">
+      <div class="w3-container">
+        <h3>The Violence </h3>
+        <p class="w3-opacity"> Delilah S. Dawson</p>
+        <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1623167555l/53329296.jpg" width="200" height="250">
+      <div class="w3-container">
+        <h3> Manhunt</h3>
+        <p class="w3-opacity"> Gretchen Felker-Martin </p>
+        <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1627510014l/58652649.jpg" width="200" height="250">
+      <div class="w3-container">
+        <h3>The Fervor </h3>
+        <p class="w3-opacity">Alma Katsu </p>
+        <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1643666795l/57693183._SY475_.jpg" width="200" height="250">
+      <div class="w3-container">
+        <h3> Sundial</h3>
+        <p class="w3-opacity">  Catriona Ward </p>
+        <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+</div><br><br>
+
+<div class="w3-center">
+  <button class="w3-button w3-center w3-grey w3-padding-large w3-hover-black">More</button>
+</div>
+
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>The Self-Help Books.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+   
+    <p><b>“The good thing about a self-help book is that if you misunderstand something then it won't mock you.”</b></p>
+  </div>
+
+  <!-- The Team 4-->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659718165l/61129785._SY475_.jpg" width="200" height="250">
+        <div class="w3-container">
+          <h3>Brain Energy</h3>
+          <p class="w3-opacity"> Christopher M. Palmer</p>
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1656315219l/60332870.jpg" width="200" height="250">
+          <div class="w3-container">
+            <h3>In Good Time</h3>
+            <p class="w3-opacity"> Jen Pollock Michel</p>
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1650537489l/60855576._SX318_.jpg" width="200" height="250">
+            <div class="w3-container">
+              <h3>Kurashi at Home</h3>
+              <p class="w3-opacity">Marie Kondō  </p>
+              <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        
+          <div class="w3-col m4 w3-margin-bottom">
+            <div class="w3-light-grey">
+              <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657179834l/61405110.jpg" width="200" height="250">
+              <div class="w3-container">
+                <h3>Ace Voices</h3>
+                <p class="w3-opacity">Eris Young </p>
+                <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          
+            <div class="w3-col m4 w3-margin-bottom">
+              <div class="w3-light-grey">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659405762l/60563725.jpg" width="200" height="250">
+                <div class="w3-container">
+                  <h3>The Sugar Jar</h3>
+                  <p class="w3-opacity"> Yasmine Cheyenne</p>
+                  <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            
+              <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                  <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1670258364l/60746476.jpg" width="200" height="250">
+                  <div class="w3-container">
+                    <h3>Financial Feminist</h3>
+                    <p class="w3-opacity">Tori Dunlap </p>
+                    <button class="w3-button w3-red w3-padding-large w3-hover-black">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+  </div><br><br>
+
+  <div class="w3-center">
+    <button class="w3-button w3-center w3-grey w3-padding-large w3-hover-black">More</button>
+  </div>
+
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
